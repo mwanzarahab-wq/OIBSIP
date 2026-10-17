@@ -1,0 +1,158 @@
+:root {
+  --ink: #16202e;
+  --panel: #1f2d40;
+  --key: #2b3b52;
+  --key-hover: #35485f;
+  --mist: #e6edf2;
+  --muted: #8da0b5;
+  --op: #d9a441;
+  --op-text: #16202e;
+  --equals: #3fb6a8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 360px;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--panel);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Screen */
+.screen {
+  min-height: 110px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--ink);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.screen-history {
+  min-height: 22px;
+  color: var(--muted);
+  font-size: 1rem;
+  word-break: break-all;
+}
+
+.screen-display {
+  color: var(--mist);
+  font-size: 2.6rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+.screen-display.is-long {
+  font-size: 1.7rem;
+}
+
+.screen-display.is-error {
+  font-size: 1.4rem;
+  color: #f08a8a;
+}
+
+/* Keys: CSS Grid layout */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  padding: 18px 0;
+  border: none;
+  border-radius: 12px;
+  background: var(--key);
+  color: var(--mist);
+  font-size: 1.3rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+
+.key:hover {
+  background: var(--key-hover);
+}
+
+.key:active {
+  transform: scale(0.96);
+}
+
+.key:focus-visible {
+  outline: 3px solid var(--equals);
+  outline-offset: 2px;
+}
+
+.key-util {
+  color: var(--muted);
+}
+
+.key-op {
+  background: var(--op);
+  color: var(--op-text);
+  font-weight: 600;
+}
+
+.key-op:hover {
+  background: #e6b556;
+}
+
+.key-equals {
+  grid-column: 4;
+  grid-row: 4 / span 2;
+  background: var(--equals);
+  color: var(--ink);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.key-equals:hover {
+  background: #52c7b9;
+}
+
+.key-zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 380px) {
+  .calculator {
+    padding: 14px;
+  }
+
+  .key {
+    padding: 15px 0;
+  }
+
+  .screen-display {
+    font-size: 2.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .key {
+    transition: none;
+  }
+}
