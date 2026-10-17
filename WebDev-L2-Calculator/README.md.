@@ -1,1 +1,16 @@
+# Calculator
 
+Task 1 (Level 2) of the Oasis Infobyte Web Development & Designing internship.
+
+A browser-based calculator built with HTML, CSS and vanilla JavaScript.
+
+## Features
+- Numbers 0-9 and decimal point
+- Add, subtract, multiply and divide
+- Clear and backspace buttons
+- Division-by-zero error handling
+
+## Tech Stack
+HTML5, CSS3, JavaScript (Vanilla)
+
+#oasisinfobyte
