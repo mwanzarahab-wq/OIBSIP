@@ -21,6 +21,9 @@ HTML5, CSS3
 Portrait of Ada Lovelace, c. 1840, attributed to Alfred Edward Chalon. Public domain, via Wikimedia Commons.
 
 ## Live Demo
-https://mwanzarahab-wq.github.io/OIBSIP/WebDev-L2-TributePage/
+https://adalovelacetribute-page.vercel.app/
+
+
+#oasisinfobyte #WebDevelopment #HTML #CSS #Internship
 
 #oasisinfobyte
