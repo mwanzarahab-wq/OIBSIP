@@ -7,8 +7,8 @@ This repository holds my task submissions for the Web Development and Designing 
 | # | Project | Folder | Status |
 |---|---------|--------|--------|
 | 1 | Calculator | `WebDev-L2-Calculator/` | Completed |
-| 2 | Tribute Page | `WebDev-L2-TributePage/` | In progress|
-| 3 | To-Do Web App | `WebDev-L2-ToDoApp/` | Not started |
+| 2 | Tribute Page | `WebDev-L2-TributePage/` |Completed |
+| 3 | To-Do Web App | `WebDev-L2-ToDoApp/` | In progress|
 | 4 | Login Authentication System | `WebDev-L2-LoginSystem/` | Not started |
 
 Each folder contains the source code, a README describing the project, and screenshots.
