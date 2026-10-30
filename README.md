@@ -1,27 +1,22 @@
-# OIBSIP: Oasis Infobyte Web Development & Designing Internship
+# Task 2: Responsive Web Page (Mitengo)
 
-This repository holds my task submissions for the Web Development and Designing internship with [Oasis Infobyte](https://www.oasisinfobyte.com).
+A responsive landing page for **Mitengo**, a Zambian grocery price comparison concept. Built with HTML, CSS, Bootstrap 5 (grid and form styles) and vanilla JavaScript.
 
-## Projects (Level 2)
+## Features
+- Mobile-first layout: 1 column on phones, 2 on tablets, 3 on desktop
+- Personal / Business toggle that switches the product set
+- Live product search, best-price highlight and "save up to X%" calculated from the data
+- Add to basket with a running total, and "Report a wrong price" feedback
+- Bottom tab navigation: Prices, Wholesale, Margin, Account
+- Margin calculator with input validation
+- Account form with JavaScript validation (email format, password length, 18+ checkbox)
 
-| # | Project | Folder | Status |
-|---|---------|--------|--------|
-| 1 | Calculator | `WebDev-L2-Calculator/` | Completed |
-| 2 | Tribute Page | `WebDev-L2-TributePage/` |Completed |
-| 3 | To-Do Web App | `WebDev-L2-ToDoApp/` | In progress|
-| 4 | Login Authentication System | `WebDev-L2-LoginSystem/` | Not started |
+## Run it
+Open `index.html` in a browser. No build step is needed, but an internet connection is required for the Bootstrap and Google Fonts CDN links.
 
-Each folder contains the source code, a README describing the project, and screenshots.
+## Files
+- `index.html`: page structure
+- `style.css`: Mitengo theme (red, gold, amber)
+- `script.js`: sample data, interactivity and validation
 
-## Tech Stack
-
-HTML5, CSS3, JavaScript (Vanilla)
-
-## Author
-
-**Rahab Mwanza**
-GitHub: [mwanzarahab-wq](https://github.com/mwanzarahab-wq)
-LinkedIn: [Rahab Mwanza](https://linkedin.com/in/rahab-juvenalis-mwanza-543311261)
-
-#oasisinfobyte
-
+All prices are sample data.
