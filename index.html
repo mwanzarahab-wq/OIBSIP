@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Today – To-Do Web App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" data-theme="grid">
+    <h1 class="page-title">Plan your day</h1>
+
+    <section class="card" aria-labelledby="today-title">
+      <header class="card-head">
+        <h2 id="today-title">Today</h2>
+        <span class="date" id="date"></span>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Change widget style" title="Change widget style">⚙</button>
+      </header>
+
+      <form id="addForm" class="add-form" autocomplete="off" novalidate>
+        <input id="taskInput" type="text" placeholder="e.g. Send email to Tim" maxlength="120" aria-label="New task">
+        <input id="timeInput" type="time" aria-label="Task time (optional)">
+        <button class="add-btn" type="submit">+ Add Task</button>
+      </form>
+      <p id="error" class="error" role="alert" hidden></p>
+
+      <div class="lists">
+      <div class="list-block">
+        <h3>Pending Tasks <span class="count" id="pendingCount">0 pending</span></h3>
+        <ul id="pendingList" class="task-list"></ul>
+        <p class="empty" id="pendingEmpty" hidden>Nothing pending. Add a task above to get started.</p>
+      </div>
+
+      <div class="list-block done">
+        <h3>Completed Tasks <span class="count" id="doneCount">0 completed</span></h3>
+        <ul id="doneList" class="task-list"></ul>
+        <p class="empty" id="doneEmpty" hidden>No completed tasks yet. Tick one off to see it here.</p>
+      </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
