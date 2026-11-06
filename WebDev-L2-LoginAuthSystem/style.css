@@ -1,35 +1,71 @@
-/* Mitengo login system - styles
-   Colours taken from the Mitengo app: red header, gold + orange accents, cream background */
-:root {
-  --red: #d9283a;
-  --dark-red: #8e0f1b;
-  --gold: #f5b800;
-  --orange: #f08a00;
-  --cream: #fff3c4;
-  --ink: #2a1608;
-  --brown: #7a4a1c;
-  --green: #1e7a46;
-}
-*, *::before, *::after { box-sizing: border-box; }
-html { font-size: 16px; }
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: "Rubik", "Segoe UI", Roboto, Arial, sans-serif;
-  color: var(--ink);
-  background-color: var(--cream);
-  /* diamond pattern + dots, like the app background */
-  background-image:
-    radial-gradient(rgba(240, 138, 0, .35) 1.5px, transparent 1.6px),
-    linear-gradient(135deg, rgba(245, 184, 0, .22) 25%, transparent 25%),
-    linear-gradient(225deg, rgba(245, 184, 0, .22) 25%, transparent 25%);
-  background-size: 26px 26px, 90px 90px, 90px 90px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mitengo | Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register">
+  <header class="top">
+    <h1 class="logo">Mitengo</h1>
+    <p class="sub">Zambian price checker</p>
+  </header>
+  <div class="stripe">COMPARE. SAVE. SHOP SMART.</div>
 
-/* ---------- header ---------- */
-.top {
-  background: linear-gradient(#ff4856, #c4182a);
-  padding: 18px clamp(16px, 4vw, 48px) 16px;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  <div class="layout">
+    <aside class="aside" aria-hidden="true">
+      <h2>Check the price before you leave home</h2>
+      <p>Compare mealie meal, oil and sugar across Soweto, Shoprite, Choppies and Pick n Pay.</p>
+      <div class="card">
+        <h3>Mealie meal 25kg</h3>
+        <div class="best"><span>Soweto Market</span><b>K255</b></div>
+        <p class="small">Sample data only.</p>
+      </div>
+    </aside>
+    <main class="folder">
+    <nav class="tabs" aria-label="Account">
+      <a class="tab" href="login.html">Log in</a>
+      <a class="tab active" href="register.html" aria-current="page">Register</a>
+    </nav>
+    <section class="panel">
+      <span class="sticker" aria-hidden="true">Free</span>
+      <h2>Create your account</h2>
+      <p class="hint">Save a basket and watch prices across Lusaka shops.</p>
+
+      <div id="msg" class="msg" role="alert" hidden></div>
+
+      <form id="form" novalidate>
+        <label for="identifier">Username or email</label>
+        <input id="identifier" type="text" autocomplete="username" placeholder="Pick a username or use your email">
+
+        <label for="password">Password</label>
+        <div class="field">
+          <input id="password" type="password" autocomplete="new-password" placeholder="Create a password">
+          <button type="button" class="show-btn" data-for="password">Show</button>
+        </div>
+        <ul class="rules">
+          <li id="rule-len">At least 8 characters</li>
+          <li id="rule-num">At least 1 number</li>
+        </ul>
+
+        <label for="confirm">Confirm password</label>
+        <div class="field">
+          <input id="confirm" type="password" autocomplete="new-password" placeholder="Type it again">
+          <button type="button" class="show-btn" data-for="confirm">Show</button>
+        </div>
+
+        <button id="submit" class="btn" type="submit">Create account</button>
+      </form>
+      <p class="swap">Already registered? <a href="login.html">Log in</a></p>
+    </section>
+  </main>
+  </div>
+  <p class="foot">Prices are reported by shoppers and may be out of date. Check in store.</p>
+  <script src="auth.js"></script>
+</body>
+</html>
+
