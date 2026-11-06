@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mitengo | Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register">
+  <header class="top">
+    <h1 class="logo">Mitengo</h1>
+    <p class="sub">Zambian price checker</p>
+  </header>
+  <div class="stripe">COMPARE. SAVE. SHOP SMART.</div>
+
+  <main class="folder">
+    <nav class="tabs" aria-label="Account">
+      <a class="tab" href="login.html">Log in</a>
+      <a class="tab active" href="register.html" aria-current="page">Register</a>
+    </nav>
+    <section class="panel">
+      <span class="sticker" aria-hidden="true">Free</span>
+      <h2>Create your account</h2>
+      <p class="hint">Save a basket and watch prices across Lusaka shops.</p>
+
+      <div id="msg" class="msg" role="alert" hidden></div>
+
+      <form id="form" novalidate>
+        <label for="identifier">Username or email</label>
+        <input id="identifier" type="text" autocomplete="username" placeholder="Pick a username or use your email">
+
+        <label for="password">Password</label>
+        <div class="field">
+          <input id="password" type="password" autocomplete="new-password" placeholder="Create a password">
+          <button type="button" class="show-btn" data-for="password">Show</button>
+        </div>
+        <ul class="rules">
+          <li id="rule-len">At least 8 characters</li>
+          <li id="rule-num">At least 1 number</li>
+        </ul>
+
+        <label for="confirm">Confirm password</label>
+        <div class="field">
+          <input id="confirm" type="password" autocomplete="new-password" placeholder="Type it again">
+          <button type="button" class="show-btn" data-for="confirm">Show</button>
+        </div>
+
+        <button id="submit" class="btn" type="submit">Create account</button>
+      </form>
+      <p class="swap">Already registered? <a href="login.html">Log in</a></p>
+    </section>
+  </main>
+  <p class="foot">Prices are reported by shoppers and may be out of date. Check in store.</p>
+  <script src="auth.js"></script>
+</body>
+</html>
