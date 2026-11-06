@@ -1,0 +1,178 @@
+/* Mitengo login system - styles
+   Colours taken from the Mitengo app: red header, gold + orange accents, cream background */
+:root {
+  --red: #d9283a;
+  --dark-red: #8e0f1b;
+  --gold: #f5b800;
+  --orange: #f08a00;
+  --cream: #fff3c4;
+  --ink: #2a1608;
+  --brown: #7a4a1c;
+  --green: #1e7a46;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 16px; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Rubik", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background-color: var(--cream);
+  /* diamond pattern + dots, like the app background */
+  background-image:
+    radial-gradient(rgba(240, 138, 0, .35) 1.5px, transparent 1.6px),
+    linear-gradient(135deg, rgba(245, 184, 0, .22) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(245, 184, 0, .22) 25%, transparent 25%);
+  background-size: 26px 26px, 90px 90px, 90px 90px;
+}
+
+/* ---------- header ---------- */
+.top {
+  background: linear-gradient(#ff4856, #c4182a);
+  padding: 18px 20px 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 3px solid var(--dark-red);
+}
+.logo {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--gold);
+  text-shadow: 2px 2px 0 var(--dark-red);
+}
+.sub { margin: 0; color: #fff; font-weight: 500; font-size: .9rem; }
+.stripe {
+  background: linear-gradient(#f9b100, var(--orange));
+  border-top: 4px solid var(--gold);
+  text-align: center;
+  padding: 9px 10px;
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .12em;
+}
+
+/* ---------- folder (tabs + panel) ---------- */
+.folder { max-width: 440px; margin: 30px auto 24px; padding: 0 16px; }
+.tabs { display: flex; gap: 4px; padding-left: 14px; position: relative; z-index: 2; margin-bottom: -2px; }
+.tab {
+  padding: 9px 22px 10px;
+  border: 2px solid var(--ink);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background: #e3a000;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(2px);
+}
+.tab:hover { background: var(--gold); }
+.tab.active {
+  background: #fff;
+  color: var(--red);
+  transform: none;
+  padding-bottom: 12px;
+}
+.panel {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 0 12px 12px 12px;
+  padding: 24px 22px 22px;
+  box-shadow: 0 6px 0 var(--gold);
+}
+h2 { margin: 0 0 4px; font-size: 1.5rem; font-weight: 800; color: var(--red); }
+.hint { margin: 0 0 18px; color: var(--brown); font-size: .95rem; line-height: 1.4; }
+
+/* ---------- form ---------- */
+label { display: block; margin: 14px 0 5px; font-weight: 700; font-size: .92rem; color: var(--brown); }
+.field { display: flex; gap: 8px; }
+input {
+  width: 100%;
+  font: inherit;
+  padding: 11px 12px;
+  border: 2px solid var(--orange);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+}
+input::placeholder { color: #a79684; }
+input:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.show-btn {
+  flex: none;
+  font: inherit;
+  font-weight: 700;
+  font-size: .85rem;
+  padding: 0 12px;
+  background: var(--cream);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.rules { list-style: none; margin: 8px 0 0; padding: 0; font-size: .85rem; color: var(--brown); }
+.rules li::before { content: "\2610  "; }
+.rules li.ok { color: var(--green); font-weight: 500; }
+.rules li.ok::before { content: "\2611  "; }
+
+.btn {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 12px;
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+  background: var(--orange);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  box-shadow: 0 4px 0 var(--ink);
+  cursor: pointer;
+}
+.btn:hover { background: #ff9a14; }
+.btn:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+.btn:disabled { opacity: .6; cursor: wait; }
+.btn.plain { background: #fff; color: var(--ink); width: auto; margin: 0; padding: 8px 16px; font-size: .95rem; box-shadow: 0 3px 0 var(--ink); }
+.btn.plain:hover { background: var(--cream); }
+
+.msg { margin: 0 0 6px; padding: 10px 12px; border-radius: 6px; font-size: .92rem; font-weight: 500; line-height: 1.35; }
+.msg.error { background: #fde7e7; border-left: 5px solid var(--red); color: #7d1019; }
+.msg.ok { background: #e4f5ea; border-left: 5px solid var(--green); color: #14502d; }
+.swap { margin: 18px 0 0; text-align: center; font-size: .92rem; color: var(--brown); }
+.swap a { color: var(--red); font-weight: 700; }
+
+/* small sticker on register page */
+.sticker {
+  position: absolute; top: -26px; right: -10px;
+  width: 66px; height: 66px;
+  display: grid; place-items: center;
+  background: var(--red); color: var(--gold);
+  font-weight: 800; font-size: .85rem;
+  transform: rotate(10deg);
+  clip-path: polygon(50% 0%,61% 12%,77% 7%,80% 23%,96% 27%,89% 42%,100% 55%,87% 65%,90% 82%,74% 84%,66% 98%,50% 90%,34% 98%,26% 84%,10% 82%,13% 65%,0% 55%,11% 42%,4% 27%,20% 23%,23% 7%,39% 12%);
+}
+
+.foot { text-align: center; color: var(--brown); font-size: .8rem; padding: 6px 16px 26px; }
+
+/* ---------- dashboard ---------- */
+.dash { max-width: 520px; margin: 26px auto; padding: 0 16px; }
+.dash h2 { font-size: 1.7rem; }
+.card { background: #fff; border: 2px solid var(--ink); border-radius: 12px; padding: 18px; margin-top: 18px; box-shadow: 0 6px 0 var(--gold); }
+.card h3 { margin: 0 0 10px; font-size: 1.1rem; }
+.row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px dashed #e8d58a; font-size: .95rem; }
+.row:last-child { border-bottom: 0; }
+.row span:first-child { color: var(--brown); }
+.row strong { text-align: right; overflow-wrap: anywhere; }
+.best { background: #fff0b8; border: 2px solid var(--gold); border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; font-weight: 700; }
+.best b { color: var(--red); }
+.small { color: var(--brown); font-size: .85rem; margin: 8px 0 0; }
+
+@media (max-width: 380px) {
+  .logo { font-size: 1.7rem; }
+  .sub { display: none; }
+  .panel { padding: 20px 16px; }
+}
